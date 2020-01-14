@@ -12,5 +12,9 @@
     "dev": "next",
     "start": "next start"
   },
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "devDependencies": {
+    "@types/react": "^16.9.17",
+    "typescript": "^3.7.4"
+  }
 }
