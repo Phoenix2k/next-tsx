@@ -1,5 +1,11 @@
+# Dot files
 .*
+
+# Folders
+dist
 node_modules
+
+# Exceptions
 !.babelrc.json
 !.editorconfig
 !.gitignore
