@@ -1,9 +1,8 @@
-import React from 'react';
 import DefaultLayout from '../layouts/Default';
 
 const Home = () => (
   <DefaultLayout>
-    <h1>Hello world!</h1>
+    <h1>Home page</h1>
   </DefaultLayout>
 );
 
