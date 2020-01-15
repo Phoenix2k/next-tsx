@@ -1,7 +1,8 @@
-# Dot files
+# Files
 .*
 
 # Folders
+__snapshots__
 dist
 node_modules
 
