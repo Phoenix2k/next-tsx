@@ -1,10 +1,9 @@
-import Nav from '../components/Nav';
+import DefaultLayout from '../layouts/Default';
 
 const About = () => (
-  <>
+  <DefaultLayout>
     <h1>About page</h1>
-    <Nav />
-  </>
+  </DefaultLayout>
 );
 
 export default About;

@@ -1,6 +1,5 @@
-import styled from '@emotion/styled';
 import { css, Global } from '@emotion/core';
-
+import styled from '@emotion/styled';
 import Nav from '../../components/Nav';
 
 const LayoutContainer = styled.div`

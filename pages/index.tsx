@@ -1,10 +1,10 @@
-import Nav from '../components/Nav';
+import React from 'react';
+import DefaultLayout from '../layouts/Default';
 
 const Home = () => (
-  <>
+  <DefaultLayout>
     <h1>Hello world!</h1>
-    <Nav />
-  </>
+  </DefaultLayout>
 );
 
 export default Home;
