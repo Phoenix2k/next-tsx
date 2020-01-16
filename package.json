@@ -29,7 +29,9 @@
     "dev": "next",
     "export": "next build && next export -o dist",
     "start": "next start",
-    "test": "jest"
+    "test": "jest",
+    "test:unit": "jest --coverage",
+    "test:update": "jest --coverage --updateSnapshot"
   },
   "version": "0.1.0"
 }
