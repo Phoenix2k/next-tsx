@@ -2,7 +2,7 @@ import DefaultLayout from '../layouts/Default';
 
 const Home = (): JSX.Element => (
   <DefaultLayout>
-    <h1>Home page</h1>
+    <h1 itemProp="title">Home page</h1>
   </DefaultLayout>
 );
 
