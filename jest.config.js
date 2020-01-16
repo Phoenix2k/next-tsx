@@ -1,17 +1,19 @@
 const { defaults } = require('jest-config');
 
 module.exports = {
+  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
+  coverageDirectory: '__tests__/coverage',
   globals: {
     'ts-jest': {
       babelConfig: '.babelrc.json',
-      tsconfig: 'tsconfig.json'
+      tsconfig: '__tests__/jest/tsconfig.json'
     }
   },
   moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
   preset: 'ts-jest',
-  setupFiles: ['<rootDir>/tests/config/jest.setup.ts'],
+  setupFiles: ['<rootDir>/__tests__/jest/jest.setup.ts'],
   testEnvironment: 'node',
-  testMatch: ['<rootDir>/tests/unit/**/*.(ts|tsx)'],
+  testMatch: ['<rootDir>/__tests__/unit/**/*.(ts|tsx)'],
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest'

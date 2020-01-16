@@ -1,3 +1,5 @@
+/// <reference types="jest"/>
+
 import { shallow } from 'enzyme';
 import React from 'react';
 import Renderer from 'react-test-renderer';

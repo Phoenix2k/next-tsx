@@ -3,11 +3,13 @@
 
 # Folders
 __snapshots__
+coverage
 dist
 node_modules
 
 # Exceptions
 !.babelrc.json
+!.cypress.json
 !.editorconfig
 !.gitignore
 !.prettierrc.json
