@@ -1,14 +1,9 @@
 import { css, Global } from '@emotion/core';
-import styled from '@emotion/styled';
 import Nav from '../../components/Nav';
+import { LayoutContainer } from './styles';
+import { InterfaceDefaultLayout } from './types';
 
-const LayoutContainer = styled.div`
-  border: 1px solid #ddd;
-  margin: 1em;
-  padding: 1em;
-`;
-
-const DefaultLayout = (props: any) => (
+const DefaultLayout = ({ children }: InterfaceDefaultLayout): JSX.Element => (
   <>
     <Global
       styles={css`
@@ -23,7 +18,7 @@ const DefaultLayout = (props: any) => (
     <LayoutContainer>
       <header>Header</header>
       <Nav />
-      <main>{props.children}</main>
+      <main>{children}</main>
       <footer>Footer</footer>
     </LayoutContainer>
   </>

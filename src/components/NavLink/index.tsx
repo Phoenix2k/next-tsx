@@ -1,10 +1,11 @@
-import classNames from 'classNames';
+import classnames from 'classnames';
 import { useRouter } from 'next/router';
+import { InterfaceNavLink } from './types';
 
-function NavLink({ children, href }) {
+function NavLink({ children, href }: InterfaceNavLink): JSX.Element {
   const router = useRouter();
   const isActive = router.pathname === href;
-  const linkClasses = classNames('link', {
+  const linkClasses = classnames('link', {
     'nav-link--active': isActive
   });
   const handleClick = (event: React.MouseEvent<HTMLElement>): void => {

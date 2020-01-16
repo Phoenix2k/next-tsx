@@ -1,6 +1,6 @@
 import DefaultLayout from '../layouts/Default';
 
-const About = () => (
+const About = (): JSX.Element => (
   <DefaultLayout>
     <h1>About page</h1>
   </DefaultLayout>

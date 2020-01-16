@@ -1,27 +1,7 @@
-import styled from '@emotion/styled';
 import NavLink from '../NavLink';
+import { NavContainer } from './styles';
 
-const NavContainer = styled.nav`
-  .nav-link {
-    color: blue;
-
-    &--active {
-      color: green;
-    }
-  }
-
-  .nav-list {
-    li {
-      display: inline-block;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-  }
-`;
-
-const Nav = () => (
+const Nav = (): JSX.Element => (
   <NavContainer>
     <ul>
       <li>
