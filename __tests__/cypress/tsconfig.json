@@ -1,0 +1,13 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "lib": ["dom", "es6"],
+    "module": "commonjs",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es5"
+  },
+  "types": ["cypress", "node"]
+}

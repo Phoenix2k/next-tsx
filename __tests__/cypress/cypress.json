@@ -1,0 +1,10 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "fixturesFolder": "__tests__/cypress/fixtures",
+  "ignoreTestFiles": ["*.json", "*.md"],
+  "integrationFolder": "__tests__/e2e",
+  "pluginsFile": "__tests__/cypress/plugins/index.js",
+  "screenshotsFolder": "__tests__/cypress/screenshots",
+  "supportFile": "__tests__/cypress/support/index.ts",
+  "videosFolder": "__tests__/cypress/videos"
+}
