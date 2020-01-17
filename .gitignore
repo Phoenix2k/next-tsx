@@ -11,6 +11,7 @@ node_modules
 
 # Exceptions
 !.babelrc.json
+!.eslintrc.json
 !.cypress.json
 !.editorconfig
 !.gitignore
