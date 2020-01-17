@@ -14,6 +14,7 @@ node_modules
 !.editorconfig
 !.eslintignore
 !.eslintrc.json
+!.github
 !.gitignore
 !.gitkeep
 !.huskyrc.json
