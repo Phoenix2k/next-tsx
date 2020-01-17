@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
-export interface InterfaceNavLink {
+export interface NavLinkProps {
   children?: ReactNode;
   href: string;
 }

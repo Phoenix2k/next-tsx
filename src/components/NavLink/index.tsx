@@ -1,8 +1,8 @@
 import classnames from 'classnames';
 import { useRouter } from 'next/router';
-import { InterfaceNavLink } from './types';
+import { NavLinkProps } from './types';
 
-function NavLink({ children, href }: InterfaceNavLink): JSX.Element {
+function NavLink({ children, href }: NavLinkProps): JSX.Element {
   const router = useRouter();
   const isActive = router.pathname === href;
   const linkClasses = classnames('link', {

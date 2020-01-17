@@ -1,9 +1,9 @@
 import { css, Global } from '@emotion/core';
 import Nav from '../../components/Nav';
 import { LayoutContainer } from './styles';
-import { InterfaceDefaultLayout } from './types';
+import { DefaultLayoutProps } from './types';
 
-const DefaultLayout = ({ children }: InterfaceDefaultLayout): JSX.Element => (
+const DefaultLayout = ({ children }: DefaultLayoutProps): JSX.Element => (
   <>
     <Global
       styles={css`

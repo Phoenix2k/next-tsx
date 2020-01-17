@@ -8,7 +8,8 @@ const cypressWebpackPreprocessor = require('./preprocessor');
  * @param {string} _config Cypress config.
  * @link https://on.cypress.io/plugins-guide
  */
-module.exports = (on, _config) => {
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+module.exports = (on) => {
   /**
    * Load preprocessor
    *

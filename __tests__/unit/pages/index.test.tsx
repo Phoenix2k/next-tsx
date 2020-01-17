@@ -1,17 +1,14 @@
 /// <reference types="jest"/>
 
 import { shallow } from 'enzyme';
-import React from 'react';
+import { NextRouter } from 'next/router';
 import Renderer from 'react-test-renderer';
 import Home from '../../../src/pages';
 
 jest.mock('next/router', () => ({
-  useRouter() {
+  useRouter(): Partial<NextRouter> {
     return {
-      asPath: '',
-      pathname: 'home',
-      query: '',
-      route: '/'
+      route: '/home'
     };
   }
 }));

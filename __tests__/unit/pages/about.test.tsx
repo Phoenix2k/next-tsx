@@ -1,16 +1,13 @@
 /// <reference types="jest"/>
 
 import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { NextRouter } from 'next/router';
+import Renderer from 'react-test-renderer';
 import About from '../../../src/pages/about';
 
 jest.mock('next/router', () => ({
-  useRouter() {
+  useRouter(): Partial<NextRouter> {
     return {
-      asPath: '',
-      pathname: 'about',
-      query: '',
       route: '/about'
     };
   }
@@ -22,7 +19,7 @@ describe('About page', () => {
     expect(shallowRender.find('h1').text()).toEqual('About page');
   });
   it('matches snapshot', () => {
-    const snapshotRender = renderer.create(<About />);
+    const snapshotRender = Renderer.create(<About />);
     const tree = snapshotRender.toJSON();
     expect(tree).toMatchSnapshot();
   });
