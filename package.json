@@ -39,6 +39,10 @@
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5"
   },
+  "engines": {
+    "node": "~12.13.0",
+    "npm": "~6.13.0"
+  },
   "name": "next-tsx",
   "private": true,
   "scripts": {
