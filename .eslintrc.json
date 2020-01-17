@@ -16,6 +16,30 @@
   "rules": {
     "@typescript-eslint/interface-name-prefix": 0,
     "@typescript-eslint/no-var-requires": 0,
-    "react/react-in-jsx-scope": 0
+    "react/react-in-jsx-scope": 0,
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+      }
+    ],
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": true,
+        "minKeys": 2,
+        "natural": false
+      }
+    ],
+    "sort-vars": [
+      "error",
+      {
+        "ignoreCase": false
+      }
+    ]
   }
 }
