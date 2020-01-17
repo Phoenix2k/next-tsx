@@ -2,6 +2,10 @@
 
 ![Work in progress][wip-badge] ![Workflow status][workflow-status]
 
+![Next.js][next-js-logo]
+
+> Next.js build with TypeScript and TSX support
+
 For detailed explanation on how things work, check out [Next.js docs][next-js]. To learn more about the TypeScript build, visit [Next TypeScript][next-ts].
 
 ## Stack
@@ -106,6 +110,7 @@ $ npm run test:update
 [jsconfig]: https://code.visualstudio.com/docs/languages/jsconfig
 [mit-badge]: https://img.shields.io/badge/license-MIT-green.svg
 [next-js]: https://nextjs.org/
+[next-js-logo]: public/nextjs.svg
 [next-logo]: public/logo.svg
 [next-ts]: https://nextjs.org/learn/excel/typescript/setup
 [node]: https://nodejs.org/
