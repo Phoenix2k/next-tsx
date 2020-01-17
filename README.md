@@ -88,7 +88,7 @@ $ npm run test:update
 * [TypeScript documentation][typescript]
 
 ## License
-[![MIT](mit-badge)](LICENSE.md)
+[![MIT][mit-badge]](LICENSE.md)
 
 [awesome-next]: https://github.com/unicodeveloper/awesome-nextjs
 [babel]: https://babeljs.io/
