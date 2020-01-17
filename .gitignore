@@ -2,7 +2,6 @@
 .*
 
 # Folders
-__snapshots__
 __tests__/cypress/screenshots/
 __tests__/cypress/videos/
 coverage

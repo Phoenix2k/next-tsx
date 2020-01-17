@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<div
+  className="css-1qibdk7-LayoutContainer evfywwz0"
+>
+  <header>
+    Header
+  </header>
+  <nav
+    className="css-1el57au-NavContainer ekr6xpg0"
+  >
+    <ul>
+      <li>
+        <a
+          className="link"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          className="link"
+          href="/about"
+          onClick={[Function]}
+        >
+          About
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <h1
+      itemProp="title"
+    >
+      Home page
+    </h1>
+  </main>
+  <footer>
+    Footer
+  </footer>
+</div>
+`;
