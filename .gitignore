@@ -18,4 +18,5 @@ node_modules
 !.gitignore
 !.gitkeep
 !.prettierrc.json
+!.stylelintrc.json
 !.vscode

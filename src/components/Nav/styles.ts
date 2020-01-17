@@ -13,6 +13,7 @@ export const NavContainer = styled.nav`
     li {
       display: inline-block;
     }
+
     ul {
       list-style: none;
       padding: 0;
