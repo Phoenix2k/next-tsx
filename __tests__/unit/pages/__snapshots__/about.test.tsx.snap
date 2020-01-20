@@ -1,14 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`About page matches snapshot 1`] = `
+.emotion-1 {
+  border: 1px solid #ccc;
+  margin: 1em;
+  padding: 1em;
+}
+
+.emotion-0 .nav-link {
+  color: blue;
+}
+
+.emotion-0 .nav-link--active {
+  color: green;
+}
+
+.emotion-0 .nav-list li {
+  display: inline-block;
+}
+
+.emotion-0 .nav-list ul {
+  list-style: none;
+  padding: 0;
+}
+
 <div
-  className="css-1qibdk7-LayoutContainer evfywwz0"
+  className="emotion-1"
 >
   <header>
     Header
   </header>
   <nav
-    className="css-1el57au-NavContainer ekr6xpg0"
+    className="emotion-0"
   >
     <ul>
       <li>

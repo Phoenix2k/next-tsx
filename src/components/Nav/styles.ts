@@ -1,11 +1,11 @@
-import styled from '@emotion/styled';
+import styled from '../../theme';
 
 export const NavContainer = styled.nav`
   .nav-link {
-    color: blue;
+    color: ${(props) => props.theme.colors.navLink};
 
     &--active {
-      color: green;
+      color: ${(props) => props.theme.colors.navLinkActive};
     }
   }
 

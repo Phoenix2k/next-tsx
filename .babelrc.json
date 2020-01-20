@@ -1,4 +1,14 @@
 {
-  "presets": ["next/babel"],
-  "plugins": [["emotion"]]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    "next/babel"
+  ],
+  "plugins": [["emotion", { "autoLabel": true, "sourceMap": true }]]
 }
