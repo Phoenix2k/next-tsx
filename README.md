@@ -46,7 +46,7 @@ Files will be generated in the `.next` folder.
 
 ### Export static version
 ```sh
-$ npm run deploy
+$ npm run export
 ```
 Files will be generated in the `dist` folder.
 
@@ -80,7 +80,7 @@ $ npm run test:update
 3. Choose an owner and a branch to deploy from
 4. Change the following settings in the build options:
    - Build command:
-   ```npm run deploy```
+   ```npm run export```
    - Publish directory:
    ```dist/```
 5. Click on `Deploy site` to publish
