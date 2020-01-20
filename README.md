@@ -1,10 +1,8 @@
 # Next TSX
 
-![Work in progress][wip-badge] ![Workflow status][workflow-status]
-
-![Next.js][next-js-logo]
-
 > Next.js build with TypeScript and TSX support
+
+![Work in progress][wip-badge] ![Workflow status][workflow-status]
 
 For detailed explanation on how things work, check out [Next.js docs][next-js]. To learn more about the TypeScript build, visit [Next TypeScript][next-ts].
 
@@ -72,6 +70,19 @@ $ npm run test:unit
 $ npm run test:update
 ```
 
+## Deployment
+
+### Netlify
+1. Sign-up or log-in to [Netlify][netlify]
+2. Create a new site from Git using your own copy of this repository
+3. Choose an owner and a branch to deploy from
+4. Change the following settings in the build options:
+   - Build command:
+   ```npm run deploy```
+   - Publish directory:
+   ```dist/```
+5. Click on `Deploy site` to publish
+
 ## Links
 * [Awesome Next][awesome-next]
 * [Babel documentation][babel]
@@ -80,8 +91,8 @@ $ npm run test:update
 * [Emotion documentation][emotion-docs]
 * [ESLint documentation][eslint] + [TypeScript support][eslint-ts]
 * [Git documentation][git]
-* [Jest documentation][jest] + [TypeScript support][jest-ts]
 * [Husky documentation][husky]
+* [Jest documentation][jest] + [TypeScript support][jest-ts]
 * [Next.js documentation][next-js] + [TypeScript support][next-ts]
 * [Prettier documentation][prettier]
 * [Stylelint developer guide][stylelint-docs]
@@ -109,8 +120,9 @@ $ npm run test:update
 [jest]: https://jestjs.io/
 [jsconfig]: https://code.visualstudio.com/docs/languages/jsconfig
 [mit-badge]: https://img.shields.io/badge/license-MIT-green.svg
-[next-js]: https://nextjs.org/
+[netlify]: https://www.netlify.com/
 [next-js-logo]: public/nextjs.svg
+[next-js]: https://nextjs.org/
 [next-logo]: public/logo.svg
 [next-ts]: https://nextjs.org/learn/excel/typescript/setup
 [node]: https://nodejs.org/
