@@ -4,7 +4,9 @@
 
 ![Work in progress][wip-badge] ![Workflow status][workflow-status]
 
-For detailed explanation on how things work, check out [Next.js docs][next-js]. To learn more about the TypeScript build, visit [Next TypeScript][next-ts].
+For detailed explanation on how things work, check out [Next.js docs][next-js].
+
+To learn more about the TypeScript build, visit [Next TypeScript][next-ts].
 
 ## Stack
 * [Babel][babel]
@@ -33,7 +35,7 @@ $ npm run install
 ```sh
 $ npm run dev
 ```
-Default location: [`http://localhost:3000/`](http://localhost:3000/)
+Default location: [`http://localhost:3000/`][localhost]
 
 ### Build for production and launch server
 ```sh
@@ -42,9 +44,9 @@ $ npm start
 ```
 Files will be generated in the `.next` folder.
 
-### Export static site
+### Export static version
 ```sh
-$ npm run export
+$ npm run deploy
 ```
 Files will be generated in the `dist` folder.
 
@@ -83,17 +85,21 @@ $ npm run test:update
    ```dist/```
 5. Click on `Deploy site` to publish
 
+See [demo site][demo-site] on Netlify.
+
+![Netlify status][netlify-status]
+
 ## Links
 * [Awesome Next][awesome-next]
 * [Babel documentation][babel]
-* [Cypress recipes][cypress-recipes] + [TypeScript support][cypress-ts]
+* [Cypress document][cypress-recipes] + [TypeScri][cypress-ts]
 * [EditorConfig documentation][editor-config]
-* [Emotion documentation][emotion-docs]
-* [ESLint documentation][eslint] + [TypeScript support][eslint-ts]
+* [Emotion documentation][emotion-docs] and [theming][emotion-theming]
+* [ESLint documentation][eslint] + [TypeScript][eslint-ts]
 * [Git documentation][git]
 * [Husky documentation][husky]
-* [Jest documentation][jest] + [TypeScript support][jest-ts]
-* [Next.js documentation][next-js] + [TypeScript support][next-ts]
+* [Jest documentation][jest] + [TypeScript][jest-ts]
+* [Next.js documentation][next-js] with [TypeScript support][next-ts]
 * [Prettier documentation][prettier]
 * [Stylelint developer guide][stylelint-docs]
 * [TypeScript documentation][typescript]
@@ -107,8 +113,10 @@ $ npm run test:update
 [cypress-ts]: https://docs.cypress.io/guides/tooling/typescript-support.html
 [cypress]: https://www.cypress.io/
 [cypress]: https://www.cypress.io/
+[demo-site]: https://awesome-newton-28faa7.netlify.com/
 [editor-config]: https://editorconfig.org/
 [emotion-docs]: https://emotion.sh/docs/introduction
+[emotion-theming]: https://emotion.sh/docs/emotion-theming
 [emotion]: https://emotion.sh/
 [eslint-ts]: https://github.com/typescript-eslint/typescript-eslint
 [eslint]: https://eslint.org/
@@ -119,7 +127,9 @@ $ npm run test:update
 [jest-ts]: https://kulshekhar.github.io/ts-jest/
 [jest]: https://jestjs.io/
 [jsconfig]: https://code.visualstudio.com/docs/languages/jsconfig
+[localhost]: http://localhost:3000/
 [mit-badge]: https://img.shields.io/badge/license-MIT-green.svg
+[netlify-status]: https://api.netlify.com/api/v1/badges/033ec389-db50-43f5-8937-690712bb2371/deploy-status
 [netlify]: https://www.netlify.com/
 [next-js-logo]: public/nextjs.svg
 [next-js]: https://nextjs.org/
