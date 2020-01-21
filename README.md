@@ -17,8 +17,10 @@ To learn more about the TypeScript build, visit [Next TypeScript][next-ts].
 - [GitHub workflow][github-workflow]
 - [Husky][husky]
 - [Jest][jest]
+- [Next.js][next-js]
 - [Prettier][prettier]
-- [React][react-js] + [Next.js][next-js]
+- [React][react]
+- [Remark][remark]
 - [Stylelint][stylelint]
 - [TypeScript][typescript]
 
@@ -42,14 +44,25 @@ $ npm run dev
 
 Default location: [`http://localhost:3000/`][localhost]
 
-### Build for production and launch server
+## Production
+
+### Build project
 
 ```sh
 $ npm run build
-$ npm start
 ```
 
 Files will be generated in the `.next` folder.
+
+### Serve on localhost
+
+```sh
+$ npm start
+```
+
+Default location: [`http://localhost:3000/`][localhost]
+
+## Deployment
 
 ### Export static version
 
@@ -59,9 +72,31 @@ $ npm run export
 
 Files will be generated in the `dist` folder.
 
-### Testing
+### Hosting
 
-All tests related files are located under `__tests__`, except a few configs which are found in the root of the project.
+#### Netlify
+
+1. Sign-up or log-in to [Netlify][netlify]
+2. Create a new site from Git using your own copy of this repository
+3. Choose an owner and a branch to deploy from
+4. Change the following settings in the build options:
+   - Build command:
+     ```sh
+     npm run export
+     ```
+   - Publish directory:
+     ```sh
+     dist/
+     ```
+5. Click on `Deploy site` to publish
+
+See [demo site][demo-site] on Netlify.
+
+![Netlify status][netlify-status]
+
+## Testing
+
+All test related files are located under `__tests__`, except a few configs which are found in the root of the project.
 
 #### Run all tests
 
@@ -94,7 +129,7 @@ $ npm run test:unit
 ```
 
 A full coverage report will be generated in the `coverage` folder. To access it, open the
-`index.html` file in your browser which is located in the `lcov-report` folder.
+`index.html` file in your browser, which is located in the `lcov-report` folder.
 
 #### Update snapshots
 
@@ -102,43 +137,42 @@ A full coverage report will be generated in the `coverage` folder. To access it,
 $ npm run test:update
 ```
 
-## Deployment
-
-### Netlify
-
-1. Sign-up or log-in to [Netlify][netlify]
-2. Create a new site from Git using your own copy of this repository
-3. Choose an owner and a branch to deploy from
-4. Change the following settings in the build options:
-   - Build command:
-     `npm run export`
-   - Publish directory:
-     `dist/`
-5. Click on `Deploy site` to publish
-
-See [demo site][demo-site] on Netlify.
-
-![Netlify status][netlify-status]
+## Documentation
+- [Babel documentation][babel]
+- [Cypress documentation][cypress]
+  - [Cypress with TypeScript support][cypress-ts]
+- [EditorConfig documentation][editor-config]
+- [Emotion documentation][emotion-docs]
+  - [Emotion theming][emotion-theming]
+- [ESLint documentation][eslint]
+  - [ESLint with TypeScript support][eslint-ts]
+- [Git documentation][git]
+- [Husky documentation][husky]
+- [Jest documentation][jest]
+  - [Jest with TypeScript support][jest-ts]
+- [Next.js documentation][next-js]
+  - [Next.js with TypeScript support][next-ts]
+- [Prettier documentation][prettier]
+- [React documentation][react]
+- [Remark documentation][remark]
+  - [Remark CLI][remark-cli]
+  - [Remark linter][remark-lint]
+  - [Remark plugins][remark-plugins]
+  - [Recommended preset][remark-preset-lint-recommended]
+  - [Style guide][remark-preset-lint-markdown-style-guide]
+- [Stylelint documentation][stylelint]
+- [TypeScript documentation][typescript]
 
 ## Links
 
 - [Awesome Next][awesome-next]
-- [Babel documentation][babel]
-- [Cypress document][cypress-recipes] + [TypeScri][cypress-ts]
-- [EditorConfig documentation][editor-config]
-- [Emotion documentation][emotion-docs] and [theming][emotion-theming]
-- [ESLint documentation][eslint] + [TypeScript][eslint-ts]
-- [Git documentation][git]
-- [Husky documentation][husky]
-- [Jest documentation][jest] + [TypeScript][jest-ts]
-- [Next.js documentation][next-js] with [TypeScript support][next-ts]
-- [Prettier documentation][prettier]
-- [Stylelint developer guide][stylelint-docs]
-- [TypeScript documentation][typescript]
+- [Cypress recipes][cypress-recipes]
+- [GitHub Markdown guide][github-markdown]
+- [React testing recipes][react-testing]
 
 ## License
 
-[![MIT][mit-badge]](LICENSE.md)
+[![MIT][mit-badge]][license]
 
 [awesome-next]: https://github.com/unicodeveloper/awesome-nextjs
 
@@ -166,6 +200,8 @@ See [demo site][demo-site] on Netlify.
 
 [git]: https://git-scm.com/
 
+[github-markdown]: https://guides.github.com/features/mastering-markdown/
+
 [github-workflow]: https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow
 
 [husky]: https://github.com/typicode/husky
@@ -173,6 +209,8 @@ See [demo site][demo-site] on Netlify.
 [jest-ts]: https://kulshekhar.github.io/ts-jest/
 
 [jest]: https://jestjs.io/
+
+[license]: LICENSE.md
 
 [localhost]: http://localhost:3000/
 
@@ -190,9 +228,21 @@ See [demo site][demo-site] on Netlify.
 
 [prettier]: https://prettier.io/
 
-[react-js]: https://reactjs.org/
+[react]: https://reactjs.org/
 
-[stylelint-docs]: https://stylelint.io/developer-guide
+[react-testing]: https://reactjs.org/docs/testing-recipes.html
+
+[remark]: https://github.com/remarkjs/remark
+
+[remark-cli]: https://github.com/remarkjs/remark/tree/master/packages/remark-cli
+
+[remark-lint]: https://github.com/remarkjs/remark-lint
+
+[remark-plugins]: https://github.com/remarkjs/remark/blob/master/doc/plugins.md
+
+[remark-preset-lint-markdown-style-guide]: https://github.com/remarkjs/remark-lint/tree/master/packages/remark-preset-lint-markdown-style-guide
+
+[remark-preset-lint-recommended]: https://github.com/remarkjs/remark-lint/tree/master/packages/remark-preset-lint-recommended
 
 [stylelint]: https://stylelint.io/
 
