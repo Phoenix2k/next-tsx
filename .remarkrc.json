@@ -1,0 +1,32 @@
+{
+  "plugins": [
+    "preset-lint-markdown-style-guide",
+    "remark-preset-lint-recommended",
+    ["lint-list-item-indent", "space"],
+    ["lint-list-item-spacing", false],
+    ["lint-maximum-line-length", false],
+    ["lint-no-shell-dollars", false],
+    ["lint-ordered-list-marker-value", "ordered"],
+    ["lint-unordered-list-marker-style", "-"]
+  ],
+  "settings": {
+    "bullet": "-",
+    "closeAtx": false,
+    "commonmark": false,
+    "emphasis": "_",
+    "entities": true,
+    "fence": "`",
+    "fences": true,
+    "gfm": true,
+    "incrementListMarker": true,
+    "listItemIndent": 1,
+    "looseTable": false,
+    "paddedTable": true,
+    "rule": "-",
+    "ruleRepetition": 3,
+    "ruleSpaces": true,
+    "setext": false,
+    "spacedTable": true,
+    "strong": "*"
+  }
+}

@@ -13,7 +13,7 @@
     }
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react"],
+  "plugins": ["@typescript-eslint", "markdown", "react"],
   "root": true,
   "rules": {
     "@typescript-eslint/interface-name-prefix": 0,

@@ -19,5 +19,6 @@ node_modules
 !.gitkeep
 !.huskyrc.json
 !.prettierrc.json
+!.remarkrc.json
 !.stylelintrc.json
 !.vscode
