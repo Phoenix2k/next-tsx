@@ -81,8 +81,8 @@
     "test": "npm run test:unit && npm run test:e2e",
     "test:ci": "jest && next build && start-test start 3000 cypress:ci",
     "test:e2e": "next build && start-test start 3000 cypress:run",
-    "test:unit": "jest --coverage",
-    "test:update": "jest --coverage --updateSnapshot"
+    "test:unit": "jest --config '__tests__/jest/jest.config.js' --coverage",
+    "test:update": "jest --config '__tests__/jest/jest.config.js' --coverage --updateSnapshot"
   },
   "version": "0.1.0"
 }

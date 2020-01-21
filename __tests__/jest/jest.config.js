@@ -11,6 +11,7 @@ module.exports = {
   },
   moduleFileExtensions: [...defaults.moduleFileExtensions, 'ts', 'tsx'],
   preset: 'ts-jest',
+  rootDir: '../../',
   setupFiles: ['<rootDir>/__tests__/jest/jest.setup.ts'],
   snapshotSerializers: ['jest-emotion'],
   testEnvironment: 'node',
