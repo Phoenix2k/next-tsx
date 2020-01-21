@@ -14,7 +14,7 @@
     "closeAtx": false,
     "commonmark": false,
     "emphasis": "_",
-    "entities": true,
+    "entities": false,
     "fence": "`",
     "fences": true,
     "gfm": true,
