@@ -1,6 +1,5 @@
 module.exports = {
-  defaultPathMap: {},
-  exportPathMap: async function() {
+  async exportPathMap() {
     return {
       '/': {
         page: '/'
