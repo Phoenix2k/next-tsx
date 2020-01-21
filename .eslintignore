@@ -1,5 +1,4 @@
+__tests__
 .next
-coverage
 dist
 node_modules
-package-lock.json
