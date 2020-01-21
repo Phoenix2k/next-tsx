@@ -36,7 +36,7 @@ exports[`Home page matches snapshot 1`] = `
     <ul>
       <li>
         <a
-          className="link"
+          className="nav-link"
           href="/"
           onClick={[Function]}
         >
@@ -45,7 +45,7 @@ exports[`Home page matches snapshot 1`] = `
       </li>
       <li>
         <a
-          className="link"
+          className="nav-link"
           href="/about"
           onClick={[Function]}
         >
