@@ -1,6 +1,6 @@
 # Next TSX ![Work in progress][wip-badge]
 
-> Next.js build with TypeScript and TSX support
+> Next.js build with TypeScript support
 
 [![Code coverage][codecov-badge]][codecov] [![Code quality][codacy-badge]][codacy] ![Workflow status][workflow-status]
 
