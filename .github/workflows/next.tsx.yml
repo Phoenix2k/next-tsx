@@ -3,7 +3,7 @@ on: [push]
 jobs:
   build:
     name: Build and export
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-16.04
     steps:
     - name: Checkout repository
       uses: actions/checkout@v1
@@ -19,7 +19,7 @@ jobs:
       run: npm run export
   lint:
     name: Code formatting and linting
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-16.04
     steps:
     - name: Checkout repository
       uses: actions/checkout@v1
@@ -35,7 +35,7 @@ jobs:
       run: npm run lint
   unit-tests:
     name: Unit tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-16.04
     steps:
     - name: Checkout repository
       uses: actions/checkout@v1
@@ -47,7 +47,7 @@ jobs:
         CI: true
   end-to-end-tests:
     name: End to end tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-16.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v1
