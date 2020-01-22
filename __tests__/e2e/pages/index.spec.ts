@@ -63,6 +63,7 @@ describe(pages.home.title, () => {
     cy.get(`[href="${altPageUrl}"]`)
       .first()
       .click();
+    cy.wait(250);
     cy.itemProp('title').contains(altPageTitle);
     if (!Cypress.env('CI')) {
       cy.screenshot(altPageSlug);
@@ -70,6 +71,7 @@ describe(pages.home.title, () => {
     cy.get(`[href="${pageUrl}"]`)
       .first()
       .click();
+    cy.wait(250);
     cy.itemProp('title').contains(pageTitle);
   });
 });
