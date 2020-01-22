@@ -204,7 +204,7 @@ $ npm run test:update
 
 [codacy-badge]: https://api.codacy.com/project/badge/Grade/e90183f4949f404984dfba9051f6a51e
 
-[codacy]: https://www.codacy.com/manual/Phoenix2k/next-tsx?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Phoenix2k/next-tsx&amp;utm_campaign=Badge_Grade
+[codacy]: https://www.codacy.com/manual/Phoenix2k/next-tsx?utm_source=github.com&utm_medium=referral&utm_content=Phoenix2k/next-tsx&utm_campaign=Badge_Grade
 
 [codecov-badge]: https://codecov.io/gh/Phoenix2k/next-tsx/branch/master/graph/badge.svg
 
