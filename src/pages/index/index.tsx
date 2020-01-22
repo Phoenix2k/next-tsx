@@ -1,4 +1,4 @@
-import DefaultLayout from '../layouts/Default';
+import DefaultLayout from '../../layouts/Default';
 
 const Home = (): JSX.Element => (
   <DefaultLayout>

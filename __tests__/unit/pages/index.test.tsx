@@ -3,7 +3,7 @@
 import { shallow } from 'enzyme';
 import { NextRouter } from 'next/router';
 import Renderer from 'react-test-renderer';
-import Home from '../../../src/pages';
+import Home from '../../../src/pages/index';
 
 jest.mock('next/router', () => ({
   useRouter(): Partial<NextRouter> {
