@@ -79,7 +79,7 @@
     "prettier:check": "prettier --check --config '.prettierrc.json' --ignore-path '.gitignore' '**/*.{js,json,ts,tsx}'",
     "start": "next start",
     "test": "npm run test:unit && npm run test:e2e",
-    "test:ci": "jest && next build && start-test start 3000 cypress:ci",
+    "test:ci": "jest --config '__tests__/jest/jest.config.js' && next build && start-test start 3000 cypress:ci",
     "test:e2e": "next build && start-test start 3000 cypress:run",
     "test:unit": "jest --config '__tests__/jest/jest.config.js' --coverage",
     "test:update": "jest --config '__tests__/jest/jest.config.js' --coverage --updateSnapshot"
