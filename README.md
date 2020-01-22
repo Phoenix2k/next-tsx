@@ -2,7 +2,7 @@
 
 > Next.js build with TypeScript and TSX support
 
-![Work in progress][wip-badge] ![Workflow status][workflow-status]
+[![Code quality][codacy-badge]][codacy] ![Workflow status][workflow-status] ![Work in progress][wip-badge]
 
 For detailed explanation on how things work, check out [Next.js docs][next-js].
 
@@ -195,6 +195,10 @@ $ npm run test:update
 [awesome-next]: https://github.com/unicodeveloper/awesome-nextjs
 
 [babel]: https://babeljs.io/
+
+[codacy-badge]: https://api.codacy.com/project/badge/Grade/e90183f4949f404984dfba9051f6a51e
+
+[codacy]: https://www.codacy.com/manual/Phoenix2k/next-tsx?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Phoenix2k/next-tsx&amp;utm_campaign=Badge_Grade
 
 [cypress-fixtures]: https://docs.cypress.io/api/commands/fixture.html
 
