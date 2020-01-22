@@ -9,6 +9,5 @@
       }
     ],
     "next/babel"
-  ],
-  "plugins": [["emotion", { "autoLabel": true, "sourceMap": true }]]
+  ]
 }
