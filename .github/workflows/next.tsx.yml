@@ -1,8 +1,24 @@
 name: Next.tsx workflow
-on: push
+on: [push]
 jobs:
-  test:
-    name: Run tests
+  build:
+    name: Build and export
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v1
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Install dependencies
+      run: npm ci
+    - name: Run build script
+      run: npm run build
+    - name: Run export script
+      run: npm run export
+  lint:
+    name: Code formatting and linting
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repository
@@ -17,7 +33,31 @@ jobs:
       run: npm run prettier:check
     - name: Lint files
       run: npm run lint
-    - name: Run tests
-      run: npm run test:ci
+  unit-tests:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v1
+    - name: Run Jest
+      uses: stefanoeb/jest-action@1.0.2
+      with:
+        jestArgs: --config '__tests__/jest/jest.config.js'
       env:
         CI: true
+  end-to-end-tests:
+    name: End to end tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v1
+        with:
+          build: npm run build
+          config-file: __tests__/cypress/cypress.json
+          start: npm start
+          wait-on: http://localhost:3000
+        env:
+          CI: true
+          CYPRESS_CI: true
