@@ -76,10 +76,11 @@
     "prettier": "prettier --config '.prettierrc.json' --ignore-path '.gitignore' --write '**/*.{js,json,ts,tsx}'",
     "prettier:check": "prettier --check --config '.prettierrc.json' --ignore-path '.gitignore' '**/*.{js,json,ts,tsx}'",
     "start": "next start",
-    "test": "npm run test:unit && npm run test:e2e",
+    "test": "npm run test:coverage && npm run test:e2e",
+    "test:coverage": "jest --config '__tests__/jest/jest.config.js' --coverage",
     "test:e2e": "next build && start-test start 3000 cypress:run",
-    "test:unit": "jest --config '__tests__/jest/jest.config.js' --coverage",
-    "test:update": "jest --clearCache && jest --config '__tests__/jest/jest.config.js' --coverage --updateSnapshot"
+    "test:unit": "jest --config '__tests__/jest/jest.config.js'",
+    "test:update": "jest --clearCache && jest --config '__tests__/jest/jest.config.js' --updateSnapshot"
   },
   "version": "0.1.0"
 }

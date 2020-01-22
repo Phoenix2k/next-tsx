@@ -1,8 +1,8 @@
-# Next TSX
+# Next TSX ![Work in progress][wip-badge]
 
 > Next.js build with TypeScript and TSX support
 
-[![Code quality][codacy-badge]][codacy] ![Workflow status][workflow-status] ![Work in progress][wip-badge]
+[![Code coverage][codecov-badge]][codecov] [![Code quality][codacy-badge]][codacy] ![Workflow status][workflow-status]
 
 For detailed explanation on how things work, check out [Next.js docs][next-js].
 
@@ -130,6 +130,15 @@ $ npm test
 
 This will run both the end-to-end tests as well as the unit tests.
 
+### Code coverage
+
+```sh
+$ npm run test:coverage
+```
+
+A full coverage report will be generated in the `coverage` folder. To access it, open the
+`index.html` file in your browser, which is located in the `lcov-report` folder.
+
 ### End-to-end tests (Cypress)
 
 ```sh
@@ -143,9 +152,6 @@ Screenshots and videos will be generated in the `cypress` folder.
 ```sh
 $ npm run test:unit
 ```
-
-A full coverage report will be generated in the `coverage` folder. To access it, open the
-`index.html` file in your browser, which is located in the `lcov-report` folder.
 
 ### Update snapshots
 
@@ -199,6 +205,10 @@ $ npm run test:update
 [codacy-badge]: https://api.codacy.com/project/badge/Grade/e90183f4949f404984dfba9051f6a51e
 
 [codacy]: https://www.codacy.com/manual/Phoenix2k/next-tsx?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Phoenix2k/next-tsx&amp;utm_campaign=Badge_Grade
+
+[codecov-badge]: https://codecov.io/gh/Phoenix2k/next-tsx/branch/master/graph/badge.svg
+
+[codecov]: https://codecov.io/gh/Phoenix2k/next-tsx
 
 [cypress-fixtures]: https://docs.cypress.io/api/commands/fixture.html
 

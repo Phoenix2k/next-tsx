@@ -51,7 +51,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v1
-      - name: Run Cypress tests
+      - name: Run end-to-end tests
         uses: cypress-io/github-action@v1
         with:
           build: npm run build
@@ -67,9 +67,17 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v1
-    - name: Run Jest
+    - name: Run unit tests and generate coverage report
       uses: stefanoeb/jest-action@1.0.2
       with:
-        jestArgs: --config '__tests__/jest/jest.config.js'
+        jestArgs: --config '__tests__/jest/jest.config.js' --coverage
       env:
         CI: true
+    - name: Upload coverage report to Codecov.io
+      uses: codecov/codecov-action@v1
+      with:
+        fail_ci_if_error: true
+        file: __tests__/coverage/coverage-final.json
+        flags: unittests
+        name: Codecov
+        token: ${{ secrets.CODECOV_TOKEN }}
