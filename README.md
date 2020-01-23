@@ -2,7 +2,7 @@
 
 > Next.js build with TypeScript support
 
-[![Code coverage][codecov-badge]][codecov] [![Code quality][codacy-badge]][codacy] ![Workflow status][workflow-status]
+[![Code quality][codacy-badge]][codacy] [![Code coverage][codecov-badge]][codecov] ![GitHub workflow status][workflow-status]
 
 For detailed explanation on how things work, check out [Next.js docs][next-js].
 
