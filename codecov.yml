@@ -1,0 +1,22 @@
+codecov:
+  require_ci_to_pass: yes
+
+coverage:
+  precision: 0
+  range: '70...100'
+  round: down
+
+parsers:
+  gcov:
+    branch_detection:
+      conditional: yes
+      loop: yes
+      macro: no
+      method: no
+
+comment:
+  behavior: default
+  branches:
+    - master
+  layout: 'reach,diff,flags,tree'
+  require_changes: no
