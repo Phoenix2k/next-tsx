@@ -35,7 +35,7 @@ const ErrorPage = ({ statusCode }: ErrorProps): JSX.Element => (
     </Head>
     <h1 id="error-status-code">Error</h1>
     <h2>
-      <code>{statusCode || 'Unknown'}</code>
+      <code id="error-code">{statusCode || 'Unknown'}</code>
     </h2>
     <Link href="/">
       <a>Return to home page</a>
@@ -43,8 +43,9 @@ const ErrorPage = ({ statusCode }: ErrorProps): JSX.Element => (
   </Container>
 );
 
-ErrorPage.getInitialProps = ({ res }: NextPageContext): ErrorProps => {
-  return { statusCode: (res && res.statusCode) || null };
+ErrorPage.getInitialProps = (props: NextPageContext): ErrorProps => {
+  const statusCode = props && props.res && props.res.statusCode;
+  return { statusCode: statusCode || null };
 };
 
 export default ErrorPage;
