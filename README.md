@@ -21,10 +21,11 @@ To learn more about the TypeScript build, visit [Next TypeScript][next-ts].
 - [Deployment](#deployment)
   - [Export static version](#export-static-version)
   - [Hosting](#hosting)
-    - [Netlify](#netlify)
+    - [Deploy to Netlify](#deploy-to-netlify)
+    - [Deploy to ZEIT Now](#deploy-to-zeit-now)
 - [Testing](#testing)
   - [Run all tests](#run-all-tests)
-  - [CI tests](#ci-tests)
+  - [Code coverage](#code-coverage)
   - [End-to-end tests (Cypress)](#end-to-end-tests-cypress)
   - [Unit tests (Jest)](#unit-tests-jest)
   - [Update snapshots](#update-snapshots)
@@ -98,7 +99,7 @@ Files will be generated in the `dist` folder.
 
 ### Hosting
 
-#### Netlify
+#### Deploy to Netlify
 
 1. Sign-up or log-in to [Netlify][netlify]
 2. Create a new site from Git using your own copy of this repository
@@ -114,9 +115,30 @@ Files will be generated in the `dist` folder.
      ```
 5. Click on `Deploy site` to publish
 
-See [demo site][demo-site] on Netlify.
+View the [documentation][netlify-docs] for more details on how to set up and deploy your project.
+
+See the [demo site][netlify-demo] on Netlify.
 
 ![Netlify status][netlify-status]
+
+#### Deploy to ZEIT Now
+
+1. Sign-up or log-in to [ZEIT Now][zeit]
+2. Install the Now CLI and log-in to the service in your terminal:
+   ```sh
+   $ npm install -g now
+   $ now login
+   ```
+3. Enter your email address
+4. Click on the confirmation link when you receive it in your inbox
+5. After you've verified your account, you can deploy the site with:
+   ```sh
+   $ now --prod
+   ```
+
+View the [documentation][zeit-docs] for more details on how to set up and deploy your project.
+
+See the [demo site][zeit-demo] on ZEIT Now.
 
 ## Testing
 
@@ -218,8 +240,6 @@ $ npm run test:update
 
 [cypress]: https://www.cypress.io/
 
-[demo-site]: https://awesome-newton-28faa7.netlify.com/
-
 [editor-config]: https://editorconfig.org/
 
 [emotion-docs]: https://emotion.sh/docs/introduction
@@ -250,6 +270,10 @@ $ npm run test:update
 
 [mit-badge]: https://img.shields.io/badge/license-MIT-green.svg
 
+[netlify-demo]: https://awesome-newton-28faa7.netlify.com/
+
+[netlify-docs]: https://docs.netlify.com/
+
 [netlify-status]: https://api.netlify.com/api/v1/badges/033ec389-db50-43f5-8937-690712bb2371/deploy-status
 
 [netlify]: https://www.netlify.com/
@@ -262,11 +286,9 @@ $ npm run test:update
 
 [prettier]: https://prettier.io/
 
-[react]: https://reactjs.org/
-
 [react-testing]: https://reactjs.org/docs/testing-recipes.html
 
-[remark]: https://github.com/remarkjs/remark
+[react]: https://reactjs.org/
 
 [remark-cli]: https://github.com/remarkjs/remark/tree/master/packages/remark-cli
 
@@ -278,6 +300,8 @@ $ npm run test:update
 
 [remark-preset-lint-recommended]: https://github.com/remarkjs/remark-lint/tree/master/packages/remark-preset-lint-recommended
 
+[remark]: https://github.com/remarkjs/remark
+
 [stylelint]: https://stylelint.io/
 
 [typescript]: https://www.typescriptlang.org/
@@ -285,3 +309,9 @@ $ npm run test:update
 [wip-badge]: https://img.shields.io/badge/WIP-Work%20in%20progress-yellow
 
 [workflow-status]: https://github.com/Phoenix2k/next-tsx/workflows/Next.tsx%20workflow/badge.svg
+
+[zeit-demo]: https://next-tsx.phoenix2k.now.sh
+
+[zeit-docs]: https://zeit.co/docs
+
+[zeit]: https://zeit.co/home
