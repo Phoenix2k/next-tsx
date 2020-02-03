@@ -48,7 +48,7 @@ describe('Error page', (): void => {
 
   it('props work as expected', async () => {
     // @ts-ignore: Test status code only
-    let props = await ErrorPage.getInitialProps({ res: { statusCode: 404 }});
+    let props = await ErrorPage.getInitialProps({ res: { statusCode: 404 } });
     act(() => {
       ReactDOM.render(
         // @ts-ignore: Test push method only
@@ -72,7 +72,7 @@ describe('Error page', (): void => {
       );
     });
     expect(document.getElementById('error-code').innerHTML).toMatch('Unknown');
-  })
+  });
 
   it('matches snapshot', (): void => {
     const snapshotRender = Renderer.create(<ErrorPage />);
