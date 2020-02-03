@@ -1,9 +1,13 @@
 import { css } from '@emotion/core';
 import styled, { CreateStyled } from '@emotion/styled';
 
+export const enableA11y = ['development'];
+
 export const globalStyles = css`
   body,
-  html {
+  code,
+  html,
+  input {
     font-family: Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;

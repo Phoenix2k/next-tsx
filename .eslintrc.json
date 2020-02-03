@@ -19,6 +19,7 @@
     "@typescript-eslint/interface-name-prefix": 0,
     "@typescript-eslint/no-var-requires": 0,
     "@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
+    "jsx-a11y/anchor-is-valid": 0,
     "react/react-in-jsx-scope": 0,
     "sort-imports": [
       "error",
