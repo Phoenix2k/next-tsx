@@ -2,8 +2,8 @@ import NavLink from '../NavLink';
 import { NavContainer } from './styles';
 
 const Nav = (): JSX.Element => (
-  <NavContainer>
-    <ul>
+  <NavContainer role="navigation" title="Navigation">
+    <ul className="nav-links">
       <li>
         <NavLink href="/">Home</NavLink>
       </li>
