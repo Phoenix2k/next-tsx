@@ -64,7 +64,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "cypress:run": "cypress run --config-file __tests__/cypress/cypress.json",
+    "cypress:run": "NODE_ENV=test cypress run --config-file __tests__/cypress/cypress.json",
     "dev": "next",
     "export": "npm run build && next export -o dist",
     "lint": "npm run lint:css && npm run lint:markdown && npm run lint:source && npm run lint:tests",
@@ -80,10 +80,10 @@
     "prettier:check": "prettier --check --config '.prettierrc.json' --ignore-path '.gitignore' '**/*.{js,json,ts,tsx}'",
     "start": "next start",
     "test": "npm run test:coverage && npm run test:e2e",
-    "test:coverage": "jest --config '__tests__/jest/jest.config.js' --coverage",
+    "test:coverage": "NODE_ENV=test jest --config '__tests__/jest/jest.config.js' --coverage",
     "test:e2e": "next build && start-test start 3000 cypress:run",
-    "test:unit": "jest --config '__tests__/jest/jest.config.js'",
-    "test:update": "jest --clearCache && jest --config '__tests__/jest/jest.config.js' --updateSnapshot"
+    "test:unit": "NODE_ENV=test jest --config '__tests__/jest/jest.config.js'",
+    "test:update": "jest --clearCache && NODE_ENV=test jest --config '__tests__/jest/jest.config.js' --updateSnapshot"
   },
   "version": "0.1.0"
 }
