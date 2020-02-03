@@ -15,7 +15,7 @@ module.exports = {
   setupFiles: ['<rootDir>/__tests__/jest/jest.setup.ts'],
   snapshotSerializers: ['jest-emotion'],
   testEnvironment: 'node',
-  testMatch: ['<rootDir>/__tests__/unit/**/*.(ts|tsx)'],
+  testMatch: ['<rootDir>/__tests__/unit/**/*.test.(ts|tsx)'],
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest'
