@@ -1,12 +1,15 @@
+import { ThemeProvider } from 'emotion-theming';
 import { RouterContext } from 'next/dist/next-server/lib/router-context';
 import { NextRouter } from 'next/router';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { act } from 'react-dom/test-utils';
+import Renderer from 'react-test-renderer';
 import NavLink from '../../../src/components/NavLink';
+import { theme } from '../../../src/theme';
 
 describe('Navigation link', () => {
-  let container: Element | null | undefined;
+  let container: HTMLElement | null | undefined;
 
   const mockCallBack = jest.fn();
   const mockEvent = { preventDefault: jest.fn() };
@@ -27,12 +30,11 @@ describe('Navigation link', () => {
   it('renders and functions correctly', () => {
     act(() => {
       ReactDOM.render(
-        // @ts-ignore Test push method only
+        // @ts-ignore: Test push method only
         <RouterContext.Provider value={mockRouter}>
           <NavLink href="/test-link" onClick={mockCallBack(mockEvent)}>
             Test link
           </NavLink>
-          ,
         </RouterContext.Provider>,
         container
       );
@@ -45,5 +47,20 @@ describe('Navigation link', () => {
       link.dispatchEvent(new MouseEvent('click', { bubbles: true }));
     });
     expect(mockCallBack).toHaveBeenCalledTimes(1);
+  });
+
+  it('matches snapshot', () => {
+    const snapshotRender = Renderer.create(
+      // @ts-ignore: Test push method only
+      <RouterContext.Provider value={mockRouter}>
+        <ThemeProvider theme={theme}>
+          <NavLink href="/test-link" onClick={mockCallBack(mockEvent)}>
+            Test link
+          </NavLink>
+        </ThemeProvider>
+      </RouterContext.Provider>
+    );
+    const tree = snapshotRender.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
