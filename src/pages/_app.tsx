@@ -15,7 +15,11 @@ interface NextAppProps {
 }
 
 /* istanbul ignore next */
-if (typeof window !== 'undefined' && enableA11y.includes(process.env.NODE_ENV)) {
+if (
+  process.env.NODE_ENV !== 'production' &&
+  typeof window !== 'undefined' &&
+  enableA11y.includes(process.env.NODE_ENV)
+) {
   const reactAxe = require('react-axe');
   const reactAxeConfig: ReactAxeConfig = {
     rules: [
