@@ -75,7 +75,7 @@
     "lint:fix:markdown": "remark --rc-path '.remarkrc.json' '.' --output",
     "lint:fix:source": "eslint --config '.eslintrc.json' --fix '**/*.{js,json,md,ts,tsx}'",
     "lint:fix:tests": "eslint --config '__tests__/.eslintrc.json' --ignore-path '__tests__/.eslintignore' --fix '**/*.{js,json,md,ts,tsx}'",
-    "lint:markdown": "remark --rc-path '.remarkrc.json' '.'",
+    "lint:markdown": "remark --rc-path '.remarkrc.json' '.' '.github/.'",
     "lint:source": "eslint --config '.eslintrc.json' '**/*.{js,json,md,ts,tsx}'",
     "lint:tests": "eslint --config '__tests__/.eslintrc.json' --ignore-path '__tests__/.eslintignore' '__tests__/**/*.{js,json,md,ts,tsx}'",
     "prettier": "prettier --config '.prettierrc.json' --ignore-path '.gitignore' --write '**/*.{js,json,ts,tsx}'",
