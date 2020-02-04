@@ -1,0 +1,21 @@
+{
+  "background_color": "#fff",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "512x512",
+      "src": "/favicon.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "/favicon.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "name": "Next.js build with TypeScript support",
+  "scope": "/",
+  "short_name": "Next TSX",
+  "start_url": "/",
+  "theme_color": "#61DAFB"
+}
