@@ -1,0 +1,33 @@
+{
+  "ci": {
+    "assert": {
+      "assertions": {
+        "first-contentful-paint": [
+          "warn",
+          {
+            "aggregationMethod": "optimistic",
+            "maxNumericValue": 2500
+          }
+        ],
+        "interactive": [
+          "warn",
+          {
+            "aggregationMethod": "optimistic",
+            "maxNumericValue": 5000
+          }
+        ],
+        "uses-http2": "off",
+        "uses-long-cache-ttl": "off"
+      },
+      "preset": "lighthouse:recommended"
+    },
+    "collect": {
+      "numberOfRuns": 2,
+      "staticDistDir": "./dist",
+      "url": ["http://localhost:3000", "http://localhost:3000/about.html"]
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}
