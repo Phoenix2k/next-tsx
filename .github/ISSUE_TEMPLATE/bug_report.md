@@ -1,10 +1,9 @@
 ---
-name: Bug report
 about: Create a report to help us improve
-title: ''
-labels: bug
 assignees: Phoenix2k
-
+labels: bug
+name: Bug report
+title: ''
 ---
 
 ## Describe the bug
