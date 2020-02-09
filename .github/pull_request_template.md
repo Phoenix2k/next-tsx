@@ -1,10 +1,3 @@
----
-about: Create a pull request
-assignees: Phoenix2k
-name: Pull request
-title: ''
----
-
 ## Description
 
 Short description of what this pull request is about.
