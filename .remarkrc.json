@@ -2,9 +2,11 @@
   "plugins": [
     "preset-lint-markdown-style-guide",
     "remark-preset-lint-recommended",
+    "remark-frontmatter",
     ["lint-list-item-indent", "space"],
     ["lint-list-item-spacing", false],
     ["lint-maximum-line-length", false],
+    ["lint-no-file-name-irregular-characters", false],
     ["lint-no-shell-dollars", false],
     ["lint-ordered-list-marker-value", "ordered"],
     ["lint-unordered-list-marker-style", "-"]
