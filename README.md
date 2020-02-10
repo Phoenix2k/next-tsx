@@ -93,6 +93,7 @@ Default location: [`http://localhost:3000/`][localhost]
 ### Export static version
 
 ```sh
+$ npm run build
 $ npm run export
 ```
 

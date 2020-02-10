@@ -1,88 +1,56 @@
 name: GitHub workflow
-on: [push]
+on:
+  pull_request:
+  push:
+    branches:
+      - master
 jobs:
-  check-for-errors:
-    name: Check for errors
-    runs-on: ubuntu-16.04
+  build-and-test:
+    env:
+      CI: true
+    name: Build and run tests
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        node-version: [12.x]
+        operating-system: [ubuntu-latest]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Install Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
-      - name: Install dependencies
-        run: npm ci
-      - name: Lint files
-        run: npm run lint
-  code-formatting:
-    name: Code formatting
-    runs-on: ubuntu-16.04
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v1
-      - name: Install Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
+          node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm ci
       - name: Check code formatting
         run: npm run prettier:check
-  end-to-end-tests:
-    name: End to end tests
-    runs-on: ubuntu-16.04
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v1
-      - name: Run Cypress
-        uses: cypress-io/github-action@v1
-        with:
-          build: npm run build
-          config-file: __tests__/cypress/cypress.json
-          start: npm start
-          wait-on: http://localhost:3000
-        env:
-          CI: true
-          CYPRESS_CI: true
-  lighthouse-tests:
-    name: Lighthouse tests
-    runs-on: ubuntu-16.04
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v1
-      - name: Install Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-      - name: Install dependencies
-        run: npm ci
-      - name: Run build script
+      - name: Check for errors
+        run: npm run lint
+      - name: Build project
         run: npm run build
-      - name: Run export script
+      - name: Export static version
         run: npm run export
-      - name: Run Lighthouse tests
-        run: npm run test:lighthouse
-        env:
-          CI: true
-  unit-tests:
-    name: Unit tests
-    runs-on: ubuntu-16.04
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v1
-      - name: Run Jest and generate coverage report
+      - name: Run unit tests and generate code coverage report
         uses: stefanoeb/jest-action@1.0.2
         with:
           jestArgs: --config '__tests__/jest/jest.config.js' --coverage
+      - name: Start server and run end-to-end tests
         env:
-          CI: true
-      - name: Upload coverage report to Codecov.io
+          CYPRESS_CI: true
+        uses: cypress-io/github-action@v1
+        with:
+          config-file: __tests__/cypress/cypress.json
+          start: npm start
+          wait-on: http://localhost:3000
+      - name: Measure accessibility, performance, seo and user experience
+        run: npm run test:lighthouse
+      - name: Upload code coverage report to Codecov.io
         uses: codecov/codecov-action@v1
         with:
           fail_ci_if_error: true
           file: __tests__/coverage/coverage-final.json
-          flags: unittests
+          flags: unit_tests
           name: Codecov report
           token: ${{ secrets.CODECOV_TOKEN }}
           yml: codecov.yml
