@@ -15,7 +15,7 @@ const webpackOptions = {
     ]
   },
   resolve: {
-    extensions: ['.ts']
+    extensions: ['.ts', '.tsx']
   }
 };
 
