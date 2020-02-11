@@ -11,7 +11,7 @@ export interface PageProps {
 }
 
 export interface Pages {
-  [key:string]: PageProps
+  [key: string]: PageProps;
 }
 
 export const pages: Pages = {
