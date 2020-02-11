@@ -4,7 +4,7 @@ import { activeLink, pages } from '../config';
 
 const pageKeys = Object.keys(pages);
 
-describe('Running generic tests for all pages...\n', () => {
+describe('Generic tests for all pages\n', () => {
   pageKeys.forEach((pageKey) => {
     const { navLabel, slug: pageSlug, title: pageTitle, url: pageUrl } = pages[pageKey];
     let altPageKey = pageKey;
