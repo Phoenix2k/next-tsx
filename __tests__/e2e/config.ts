@@ -3,7 +3,17 @@ export const activeLink = {
   color: 'rgb(0, 128, 0)'
 };
 
-export const pages = {
+export interface PageProps {
+  slug: string;
+  title: string;
+  url: string;
+}
+
+export interface Pages {
+  [key:string]: PageProps
+}
+
+export const pages: Pages = {
   about: {
     slug: 'about-page',
     title: 'About page',
