@@ -38,7 +38,7 @@ describe(pages.about.title, () => {
   it('has a main container', () => {
     cy.visit(pageUrl);
     cy.get('main').should('be.visible');
-    if (!Cypress.env('CI')) {
+    if (Cypress.config('video')) {
       cy.screenshot(pageSlug);
     }
   });
@@ -65,7 +65,7 @@ describe(pages.about.title, () => {
       .click();
     cy.wait(250);
     cy.itemProp('title').contains(altPageTitle);
-    if (!Cypress.env('CI')) {
+    if (Cypress.config('video')) {
       cy.screenshot(altPageSlug);
     }
     cy.get(`[href="${pageUrl}"]`)

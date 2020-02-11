@@ -7,5 +7,5 @@ Cypress.Screenshot.defaults({
   capture: 'fullPage',
   disableTimersAndAnimations: true,
   scale: false,
-  screenshotOnRunFailure: !Cypress.env('CI')
+  screenshotOnRunFailure: Cypress.config('video')
 });
