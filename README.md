@@ -2,7 +2,7 @@
 
 > Next.js build with TypeScript support
 
-[![Code quality][codacy-badge]][codacy] [![Code coverage][codecov-badge]][codecov] ![GitHub workflow status][workflow-status]
+[![Code quality][codacy-badge]][codacy] [![Code coverage][codecov-badge]][codecov] [![Dependencies][depfu-badge]][depfu-link] ![GitHub workflow status][github-workflow-badge]
 
 For detailed explanation on how things work, check out [Next.js docs][next-js].
 
@@ -250,6 +250,10 @@ $ npm run test:update
 
 [cypress]: https://www.cypress.io/
 
+[depfu-badge]: https://badges.depfu.com/badges/2ee2246a78daa13e22bd87ba2b569f3d/overview.svg
+
+[depfu-link]: https://depfu.com/github/Phoenix2k/next-tsx?project_id=10913
+
 [editor-config]: https://editorconfig.org/
 
 [emotion-docs]: https://emotion.sh/docs/introduction
@@ -267,6 +271,8 @@ $ npm run test:update
 [github-markdown]: https://guides.github.com/features/mastering-markdown/
 
 [github-workflow]: https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow
+
+[github-workflow-badge]: https://github.com/Phoenix2k/next-tsx/workflows/GitHub%20workflow/badge.svg
 
 [husky]: https://github.com/typicode/husky
 
@@ -319,8 +325,6 @@ $ npm run test:update
 [typescript]: https://www.typescriptlang.org/
 
 [wip-badge]: https://img.shields.io/badge/WIP-Work%20in%20progress-yellow
-
-[workflow-status]: https://github.com/Phoenix2k/next-tsx/workflows/Next.tsx%20workflow/badge.svg
 
 [zeit-demo]: https://next-tsx.phoenix2k.now.sh
 
