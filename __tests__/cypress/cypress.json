@@ -6,5 +6,7 @@
   "pluginsFile": "__tests__/cypress/plugins/index.js",
   "screenshotsFolder": "__tests__/cypress/screenshots",
   "supportFile": "__tests__/cypress/support/index.ts",
+  "trashAssetsBeforeRuns": true,
+  "video": false,
   "videosFolder": "__tests__/cypress/videos"
 }
