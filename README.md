@@ -169,6 +169,14 @@ A full coverage report will be generated in the `coverage` folder. To access it,
 $ npm run test:e2e
 ```
 
+This will run all tests without generating any additional files.
+
+Alternatively, if you want Cypress to create screenshots and a video of what it sees, use the following command:
+
+```sh
+$ npm run test:e2e:record
+```
+
 Screenshots and videos will be generated in the `cypress` folder.
 
 ### Lighthouse
