@@ -4,6 +4,7 @@ export const activeLink = {
 };
 
 export interface PageProps {
+  navLabel: string;
   slug: string;
   title: string;
   url: string;
@@ -15,11 +16,13 @@ export interface Pages {
 
 export const pages: Pages = {
   about: {
+    navLabel: 'About',
     slug: 'about-page',
     title: 'About page',
     url: '/about'
   },
   home: {
+    navLabel: 'Home',
     slug: 'home-page',
     title: 'Home page',
     url: '/'

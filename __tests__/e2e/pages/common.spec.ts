@@ -6,7 +6,7 @@ const pageKeys = Object.keys(pages);
 
 describe('Running generic tests for all pages...\n', () => {
   pageKeys.forEach((pageKey) => {
-    const { slug: pageSlug, title: pageTitle, url: pageUrl } = pages[pageKey];
+    const { navLabel, slug: pageSlug, title: pageTitle, url: pageUrl } = pages[pageKey];
     let altPageKey = pageKey;
 
     do {
@@ -22,33 +22,37 @@ describe('Running generic tests for all pages...\n', () => {
 
       describe('Header', () => {
         it('has a header', () => {
-          cy.get('header').should('be.visible');
+          cy.get('header')
+            .should('be.visible')
+            .and('not.be.empty');
         });
       });
 
       describe('Navigation', () => {
         it('has a navigation', () => {
-          cy.get('nav').should('be.visible');
-        });
-
-        it('current page is marked as active', () => {
-          cy.get(`[href="${pageUrl}"]`)
-            .first()
-            .should('have.class', activeLink.class);
-        });
-
-        it('current page link color is green', () => {
-          cy.get(`[href="${pageUrl}"]`)
-            .first()
-            .should('have.css', 'color', activeLink.color);
+          cy.get('nav')
+            .should('be.visible')
+            .and('not.be.empty');
         });
 
         it('has only one active navigation link', () => {
           cy.get('.nav-link--active').should('have.length', 1);
         });
 
+        it('active navigation link color is green', () => {
+          cy.get('.nav-link--active').should('have.css', 'color', activeLink.color);
+        });
+
+        it('current page is marked as active', () => {
+          cy.get(`nav a[href="${pageUrl}"]`).should('have.class', activeLink.class);
+        });
+
+        it('current page link has the right content', () => {
+          cy.get(`nav a[href="${pageUrl}"]`).contains(navLabel);
+        });
+
         it('navigates to a random page and comes back', () => {
-          cy.get(`[href="${altPageUrl}"]`)
+          cy.get(`nav a[href="${altPageUrl}"]`)
             .first()
             .click();
           cy.wait(250);
