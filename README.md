@@ -2,7 +2,7 @@
 
 > Next.js build with TypeScript support
 
-[![Code quality][codacy-badge]][codacy] [![Code coverage][codecov-badge]][codecov] [![Dependencies][depfu-badge]][depfu-link] ![GitHub workflow status][github-workflow-badge] [![Total alerts][lgtm-badge]][lgtm-alerts]
+[![Code quality][codacy-badge]][codacy-report] [![Code coverage][codecov-badge]][codecov-report] [![Dependencies][depfu-badge]][depfu-report] ![GitHub workflow status][github-workflow-badge] [![Total alerts][lgtm-badge]][lgtm-alerts]
 
 For detailed explanation on how things work, check out [Next.js docs][next-js].
 
@@ -11,6 +11,7 @@ To learn more about the TypeScript build, visit [Next TypeScript][next-ts].
 ## Table of contents
 
 - [What's included](#whats-included)
+- [Integrations](#integrations)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Development](#development)
@@ -40,15 +41,24 @@ To learn more about the TypeScript build, visit [Next TypeScript][next-ts].
 - [Cypress][cypress]
 - [Emotion][emotion]
 - [ESLint][eslint]
-- [GitHub workflow][github-workflow]
 - [Husky][husky]
 - [Jest][jest]
 - [Next.js][next-js]
 - [Prettier][prettier]
 - [React][react]
+- [React-axe][react-axe]
 - [Remark][remark]
 - [Stylelint][stylelint]
 - [TypeScript][typescript]
+
+## Integrations
+
+- [Codacy][codacy]
+- [Codecov][codecov]
+- [Depfu][depfu]
+- [GitHub Actions][github-actions]
+- [LGTM][lgtm]
+- [Lighthouse][lighthouse]
 
 ## Requirements
 
@@ -244,11 +254,15 @@ $ npm run test:update
 
 [codacy-badge]: https://api.codacy.com/project/badge/Grade/e90183f4949f404984dfba9051f6a51e
 
-[codacy]: https://www.codacy.com/manual/Phoenix2k/next-tsx?utm_source=github.com&utm_medium=referral&utm_content=Phoenix2k/next-tsx&utm_campaign=Badge_Grade
+[codacy-report]: https://www.codacy.com/manual/Phoenix2k/next-tsx?utm_source=github.com&utm_medium=referral&utm_content=Phoenix2k/next-tsx&utm_campaign=Badge_Grade
+
+[codacy]: https://www.codacy.com/
 
 [codecov-badge]: https://codecov.io/gh/Phoenix2k/next-tsx/branch/master/graph/badge.svg
 
-[codecov]: https://codecov.io/gh/Phoenix2k/next-tsx
+[codecov-report]: https://codecov.io/gh/Phoenix2k/next-tsx
+
+[codecov]: https://codecov.io/ "Code Coverage Done Right"
 
 [cypress-fixtures]: https://docs.cypress.io/api/commands/fixture.html
 
@@ -260,7 +274,9 @@ $ npm run test:update
 
 [depfu-badge]: https://badges.depfu.com/badges/2ee2246a78daa13e22bd87ba2b569f3d/overview.svg
 
-[depfu-link]: https://depfu.com/github/Phoenix2k/next-tsx?project_id=10913
+[depfu-report]: https://depfu.com/github/Phoenix2k/next-tsx?project_id=10913
+
+[depfu]: https://depfu.com/ "Automated dependency updates done right"
 
 [editor-config]: https://editorconfig.org/
 
@@ -276,9 +292,9 @@ $ npm run test:update
 
 [git]: https://git-scm.com/
 
-[github-markdown]: https://guides.github.com/features/mastering-markdown/
+[github-actions]: https://github.com/features/actions
 
-[github-workflow]: https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow
+[github-markdown]: https://guides.github.com/features/mastering-markdown/
 
 [github-workflow-badge]: https://github.com/Phoenix2k/next-tsx/workflows/GitHub%20workflow/badge.svg
 
@@ -291,6 +307,8 @@ $ npm run test:update
 [lgtm-alerts]: https://lgtm.com/projects/g/Phoenix2k/next-tsx/alerts/
 
 [lgtm-badge]: https://img.shields.io/lgtm/alerts/g/Phoenix2k/next-tsx.svg?logo=lgtm&logoWidth=18
+
+[lgtm]: https://lgtm.com/ "Code Analysis Platform to Find and Prevent Vulnerabilities"
 
 [license]: LICENSE.md
 
@@ -315,6 +333,8 @@ $ npm run test:update
 [node]: https://nodejs.org/
 
 [prettier]: https://prettier.io/
+
+[react-axe]: https://github.com/dequelabs/react-axe
 
 [react-testing]: https://reactjs.org/docs/testing-recipes.html
 
