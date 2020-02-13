@@ -2,7 +2,7 @@
 
 > Next.js build with TypeScript support
 
-[![Code quality][codacy-badge]][codacy] [![Code coverage][codecov-badge]][codecov] [![Dependencies][depfu-badge]][depfu-link] ![GitHub workflow status][github-workflow-badge]
+[![Code quality][codacy-badge]][codacy] [![Code coverage][codecov-badge]][codecov] [![Dependencies][depfu-badge]][depfu-link] ![GitHub workflow status][github-workflow-badge] [![Total alerts][lgtm-badge]][lgtm-alerts]
 
 For detailed explanation on how things work, check out [Next.js docs][next-js].
 
@@ -287,6 +287,10 @@ $ npm run test:update
 [jest-ts]: https://kulshekhar.github.io/ts-jest/
 
 [jest]: https://jestjs.io/
+
+[lgtm-alerts]: https://lgtm.com/projects/g/Phoenix2k/next-tsx/alerts/
+
+[lgtm-badge]: https://img.shields.io/lgtm/alerts/g/Phoenix2k/next-tsx.svg?logo=lgtm&logoWidth=18
 
 [license]: LICENSE.md
 
