@@ -2,7 +2,7 @@ import { NextPageContext } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
-import styled from '../theme';
+import styled from '../theme/styled';
 
 const Container = styled.main`
   align-items: center;

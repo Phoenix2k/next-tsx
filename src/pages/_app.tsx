@@ -6,7 +6,8 @@ import React from 'react';
 import { ReactAxeConfig } from 'react-axe';
 import ReactDOM from 'react-dom';
 import manifest from '../../public/manifest.json';
-import { enableA11y, globalStyles, theme } from '../theme';
+import config from '../config';
+import { globalStyles } from '../theme';
 
 interface NextAppProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -19,7 +20,7 @@ interface NextAppProps {
 if (
   process.env.NODE_ENV !== 'production' &&
   typeof window !== 'undefined' &&
-  enableA11y.includes(process.env.NODE_ENV)
+  config.a11yEnv.includes(process.env.NODE_ENV)
 ) {
   const reactAxe = require('react-axe');
   const reactAxeConfig: ReactAxeConfig = {
@@ -40,7 +41,7 @@ const NextApp = ({ Component, pageProps }: NextAppProps): JSX.Element => (
       <meta key="theme-color" name="theme-color" content={manifest.theme_color} />
       <meta key="viewport" name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={config.theme}>
       <Global styles={globalStyles} />
       <Component {...pageProps} />
     </ThemeProvider>

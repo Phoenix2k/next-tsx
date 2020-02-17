@@ -1,4 +1,4 @@
-import styled from '../../theme';
+import styled from '../../theme/styled';
 
 export const NavContainer = styled.nav`
   .nav-link {

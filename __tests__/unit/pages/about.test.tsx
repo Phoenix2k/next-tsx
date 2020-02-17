@@ -4,8 +4,8 @@ import { ThemeProvider } from 'emotion-theming';
 import { shallow } from 'enzyme';
 import { NextRouter } from 'next/router';
 import Renderer from 'react-test-renderer';
+import config from '../../../src/config';
 import About from '../../../src/pages/about';
-import { theme } from '../../../src/theme';
 
 jest.mock('next/router', () => ({
   useRouter(): Partial<NextRouter> {
@@ -22,7 +22,7 @@ describe('About page', () => {
   });
   it('matches snapshot', () => {
     const snapshotRender = Renderer.create(
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={config.theme}>
         <About />
       </ThemeProvider>
     );
