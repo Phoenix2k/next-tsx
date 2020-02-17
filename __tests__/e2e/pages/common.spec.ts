@@ -1,19 +1,19 @@
 /// <reference types="../../cypress/support"/>
 
-import { activeLink, pages } from '../config';
+import config from '../../../src/config';
 
-const pageKeys = Object.keys(pages);
+const pageKeys = Object.keys(config.pages);
 
 describe('Generic tests for all pages\n', () => {
   pageKeys.forEach((pageKey) => {
-    const { navLabel, slug: pageSlug, title: pageTitle, url: pageUrl } = pages[pageKey];
+    const { navLabel, slug: pageSlug, title: pageTitle, url: pageUrl } = config.pages[pageKey];
     let altPageKey = pageKey;
 
     do {
       altPageKey = pageKeys[(pageKeys.length * Math.random()) << 0];
     } while (altPageKey === pageKey);
 
-    const { slug: altPageSlug, title: altPageTitle, url: altPageUrl } = pages[altPageKey];
+    const { slug: altPageSlug, title: altPageTitle, url: altPageUrl } = config.pages[altPageKey];
 
     describe(pageTitle, () => {
       before(() => {
@@ -56,11 +56,18 @@ describe('Generic tests for all pages\n', () => {
           });
 
           it('active navigation link color is green', () => {
-            cy.get('.nav-link--active').should('have.css', 'color', activeLink.color);
+            cy.get('.nav-link--active').should(
+              'have.css',
+              'color',
+              config.theme.colors.navLinkActive
+            );
           });
 
           it('current page is marked as active', () => {
-            cy.get(`nav a[href="${pageUrl}"]`).should('have.class', activeLink.class);
+            cy.get(`nav a[href="${pageUrl}"]`).should(
+              'have.class',
+              config.theme.classes.navLinkActive
+            );
           });
 
           it('current page link has the right content', () => {

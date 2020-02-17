@@ -1,0 +1,14 @@
+{
+  "about": {
+    "navLabel": "About",
+    "slug": "about-page",
+    "title": "About page",
+    "url": "/about"
+  },
+  "home": {
+    "navLabel": "Home",
+    "slug": "home-page",
+    "title": "Home page",
+    "url": "/"
+  }
+}

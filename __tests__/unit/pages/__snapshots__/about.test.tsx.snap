@@ -14,7 +14,7 @@ exports[`About page matches snapshot 1`] = `
 }
 
 .emotion-0 .nav-link--active {
-  color: green;
+  color: rgb(0,128,0);
 }
 
 .emotion-0 .nav-links {
