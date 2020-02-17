@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Config matches snapshot 1`] = `
+Object {
+  "a11yEnv": Array [
+    "development",
+  ],
+  "pages": Object {
+    "about": Object {
+      "navLabel": "About",
+      "slug": "about-page",
+      "title": "About page",
+      "url": "/about",
+    },
+    "home": Object {
+      "navLabel": "Home",
+      "slug": "home-page",
+      "title": "Home page",
+      "url": "/",
+    },
+  },
+  "theme": Object {
+    "classes": Object {
+      "navLinkActive": "nav-link--active",
+    },
+    "colors": Object {
+      "backgroundColor": "rgb(255,255,255)",
+      "borderColor": "#ccc",
+      "color": "black",
+      "navLink": "blue",
+      "navLinkActive": "rgb(0, 128, 0)",
+    },
+    "typography": Object {
+      "sansSerif": "\\"Open Sans\\", Helvetica, Arial, sans-serif",
+    },
+  },
+}
+`;
