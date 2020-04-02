@@ -28,7 +28,6 @@ To learn more about the TypeScript build, visit [Next TypeScript][next-ts].
   - [Run all tests](#run-all-tests)
   - [Code coverage](#code-coverage)
   - [End-to-end tests (Cypress)](#end-to-end-tests-cypress)
-  - [Lighthouse](#lighthouse)
   - [Unit tests (Jest)](#unit-tests-jest)
   - [Update snapshots](#update-snapshots)
 - [Documentation](#documentation)
@@ -58,7 +57,6 @@ To learn more about the TypeScript build, visit [Next TypeScript][next-ts].
 - [Depfu][depfu]
 - [GitHub Actions][github-actions]
 - [LGTM][lgtm]
-- [Lighthouse][lighthouse]
 
 ## Requirements
 
@@ -189,14 +187,6 @@ $ npm run test:e2e:record
 
 Screenshots and videos will be generated in the `cypress` folder.
 
-### Lighthouse
-
-```sh
-$ npm run test:lighthouse
-```
-
-This will run [Lighthouse][lighthouse] tests in your terminal.
-
 ### Unit tests (Jest)
 
 ```sh
@@ -311,8 +301,6 @@ $ npm run test:update
 [lgtm]: https://lgtm.com/ "Code Analysis Platform to Find and Prevent Vulnerabilities"
 
 [license]: LICENSE.md
-
-[lighthouse]: https://developers.google.com/web/tools/lighthouse/
 
 [localhost]: http://localhost:3000/
 

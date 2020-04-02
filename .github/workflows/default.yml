@@ -43,10 +43,6 @@ jobs:
           config-file: __tests__/cypress/cypress.json
           start: npm start
           wait-on: http://localhost:3000
-      - name: Measure accessibility, performance, SEO and user experience
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-        run: npm run test:lighthouse
       - name: Upload code coverage report to Codecov.io
         uses: codecov/codecov-action@v1
         with:
