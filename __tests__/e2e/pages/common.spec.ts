@@ -29,26 +29,20 @@ describe('Generic tests for all pages\n', () => {
         });
 
         it('has a meta title', () => {
-          cy.get('head title')
-            .and('have.length', 1)
-            .and('not.be.empty');
+          cy.get('head title').and('have.length', 1).and('not.be.empty');
         });
       });
 
       describe('Body', () => {
         describe('Header', () => {
           it('has a header', () => {
-            cy.get('header')
-              .should('be.visible')
-              .and('not.be.empty');
+            cy.get('header').should('be.visible').and('not.be.empty');
           });
         });
 
         describe('Navigation', () => {
           it('has a navigation', () => {
-            cy.get('nav')
-              .should('be.visible')
-              .and('not.be.empty');
+            cy.get('nav').should('be.visible').and('not.be.empty');
           });
 
           it('has only one active navigation link', () => {
@@ -75,17 +69,13 @@ describe('Generic tests for all pages\n', () => {
           });
 
           it('navigates to a random page and comes back', () => {
-            cy.get(`nav a[href="${altPageUrl}"]`)
-              .first()
-              .click();
+            cy.get(`nav a[href="${altPageUrl}"]`).first().click();
             cy.wait(250);
             cy.itemProp('title').contains(altPageTitle);
             if (Cypress.config('video')) {
               cy.screenshot(altPageSlug);
             }
-            cy.get(`[href="${pageUrl}"]`)
-              .first()
-              .click();
+            cy.get(`[href="${pageUrl}"]`).first().click();
             cy.wait(250);
             cy.itemProp('title').contains(pageTitle);
           });
