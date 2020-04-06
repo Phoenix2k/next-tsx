@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: ['12.x']
         operating-system: [ubuntu-latest]
     steps:
       - name: Checkout repository
