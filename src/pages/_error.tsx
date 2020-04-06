@@ -1,4 +1,4 @@
-import { NextPageContext } from 'next';
+import { NextPage, NextPageContext } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
@@ -24,11 +24,11 @@ const Container = styled.main`
   }
 `;
 
-interface ErrorProps {
+interface ErrorProps extends NextPageContext {
   statusCode?: number | null;
 }
 
-const ErrorPage = ({ statusCode }: ErrorProps): JSX.Element => (
+const ErrorPage: NextPage<ErrorProps> = ({ statusCode }) => (
   <Container>
     <Head>
       <title>{statusCode && `${statusCode} - `}Page not found</title>
@@ -44,8 +44,9 @@ const ErrorPage = ({ statusCode }: ErrorProps): JSX.Element => (
 );
 
 ErrorPage.getInitialProps = (props: NextPageContext): ErrorProps => {
-  const statusCode = props && props.res && props.res.statusCode;
-  return { statusCode: statusCode || null };
+  const statusCode = (props && props.res && props.res.statusCode) || null;
+  const { pathname, query, AppTree } = props;
+  return { AppTree, pathname, query, statusCode };
 };
 
 export default ErrorPage;

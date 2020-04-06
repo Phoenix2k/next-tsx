@@ -1,7 +1,7 @@
 import NavLink from '../NavLink';
 import { NavContainer } from './styles';
 
-const Nav = (): JSX.Element => (
+const Nav: React.FunctionComponent = () => (
   <NavContainer role="navigation" title="Navigation">
     <ul className="nav-links">
       <li>

@@ -9,7 +9,7 @@ import manifest from '../../public/manifest.json';
 import config from '../config';
 import { globalStyles } from '../theme';
 
-interface NextAppProps {
+interface AppProps {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Component: NextComponentType<NextPageContext, any, {}>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -34,7 +34,7 @@ if (
   reactAxe(React, ReactDOM, 1000, reactAxeConfig);
 }
 
-const NextApp = ({ Component, pageProps }: NextAppProps): JSX.Element => (
+const NextApp: React.FunctionComponent<AppProps> = ({ Component, pageProps }) => (
   <>
     <Head>
       <link key="manifest" rel="manifest" href="/manifest.json" />

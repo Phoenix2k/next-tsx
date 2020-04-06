@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import { useRouter } from 'next/router';
 import { NavLinkProps } from './types';
 
-function NavLink({ children, href, onClick }: NavLinkProps): JSX.Element {
+const NavLink: React.FunctionComponent<NavLinkProps> = ({ children, href, onClick }) => {
   const router = useRouter();
   const isActive = router.pathname === href;
   const linkClasses = classnames('nav-link', {
@@ -17,6 +17,6 @@ function NavLink({ children, href, onClick }: NavLinkProps): JSX.Element {
       {children}
     </a>
   );
-}
+};
 
 export default NavLink;

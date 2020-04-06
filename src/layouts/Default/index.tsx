@@ -2,7 +2,7 @@ import Nav from '../../components/Nav';
 import { LayoutContainer } from './styles';
 import { DefaultLayoutProps } from './types';
 
-const DefaultLayout = ({ children }: DefaultLayoutProps): JSX.Element => (
+const DefaultLayout: React.FunctionComponent<DefaultLayoutProps> = ({ children }) => (
   <LayoutContainer>
     <header>Header</header>
     <Nav />

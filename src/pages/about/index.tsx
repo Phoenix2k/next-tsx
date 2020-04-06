@@ -1,7 +1,8 @@
+import { NextPage } from 'next';
 import Head from 'next/head';
 import DefaultLayout from '../../layouts/Default';
 
-const About = (): JSX.Element => (
+const About: NextPage = () => (
   <DefaultLayout>
     <Head>
       <title>About page</title>
