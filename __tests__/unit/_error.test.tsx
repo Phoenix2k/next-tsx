@@ -18,6 +18,11 @@ jest.mock('next/router', () => ({
 
 describe('Error page', (): void => {
   let container: HTMLElement | null | undefined;
+  const mockErrorPageProps = {
+    AppTree: null as null,
+    pathname: '',
+    query: null as null
+  };
 
   const mockRouter: Partial<NextRouter> = {
     push: (url: string) => Promise.resolve(!!url)
@@ -38,7 +43,7 @@ describe('Error page', (): void => {
       ReactDOM.render(
         // @ts-ignore: Test push method only
         <RouterContext.Provider value={mockRouter}>
-          <ErrorPage />
+          <ErrorPage AppTree={null} pathname="" query={null} />
         </RouterContext.Provider>,
         container
       );
@@ -47,8 +52,11 @@ describe('Error page', (): void => {
   });
 
   it('props work as expected', async () => {
-    // @ts-ignore: Test status code only
-    let props = await ErrorPage.getInitialProps({ res: { statusCode: 404 } });
+    let props = await ErrorPage.getInitialProps({
+      ...mockErrorPageProps,
+      // @ts-ignore: Test status code only
+      res: { statusCode: 404 }
+    });
     act(() => {
       ReactDOM.render(
         // @ts-ignore: Test push method only
@@ -61,7 +69,7 @@ describe('Error page', (): void => {
     expect(document.getElementById('error-code').innerHTML).toMatch('404');
 
     // @ts-ignore: Test status code only
-    props = await ErrorPage.getInitialProps();
+    props = await ErrorPage.getInitialProps({ ...mockErrorPageProps });
     act(() => {
       ReactDOM.render(
         // @ts-ignore: Test push method only
@@ -75,7 +83,7 @@ describe('Error page', (): void => {
   });
 
   it('matches snapshot', (): void => {
-    const snapshotRender = Renderer.create(<ErrorPage />);
+    const snapshotRender = Renderer.create(<ErrorPage AppTree={null} pathname="" query={null} />);
     const tree = snapshotRender.toJSON();
     expect(tree).toMatchSnapshot();
   });
