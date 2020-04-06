@@ -24,11 +24,11 @@ const Container = styled.main`
   }
 `;
 
-interface ErrorProps extends NextPageContext {
+export interface ErrorPageProps extends NextPageContext {
   statusCode?: number | null;
 }
 
-const ErrorPage: NextPage<ErrorProps> = ({ statusCode }) => (
+const ErrorPage: NextPage<ErrorPageProps> = ({ statusCode }) => (
   <Container>
     <Head>
       <title>{statusCode && `${statusCode} - `}Page not found</title>
@@ -43,9 +43,9 @@ const ErrorPage: NextPage<ErrorProps> = ({ statusCode }) => (
   </Container>
 );
 
-ErrorPage.getInitialProps = (props: NextPageContext): ErrorProps => {
-  const statusCode = (props && props.res && props.res.statusCode) || null;
+ErrorPage.getInitialProps = (props: NextPageContext): ErrorPageProps => {
   const { pathname, query, AppTree } = props;
+  const statusCode = (props && props.res && props.res.statusCode) || null;
   return { AppTree, pathname, query, statusCode };
 };
 
