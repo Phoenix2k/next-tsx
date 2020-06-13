@@ -42,11 +42,10 @@ jobs:
           start: npm start
           wait-on: http://localhost:3000
       - name: Upload code coverage report to Codecov.io
-        uses: codecov/codecov-action@v1
+        uses: codecov/codecov-action@master
         with:
           fail_ci_if_error: true
-          file: __tests__/coverage/coverage-final.json
+          file: __tests__/coverage/lcov.info
           flags: unit_tests
           name: Codecov report
           token: ${{ secrets.CODECOV_TOKEN }}
-          yml: codecov.yml
