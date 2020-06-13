@@ -1,6 +1,6 @@
 import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
-import { NextComponentType, NextPageContext } from 'next';
+import { AppProps } from 'next/app';
 import Head from 'next/head';
 import React from 'react';
 import { ReactAxeConfig } from 'react-axe';
@@ -8,13 +8,6 @@ import ReactDOM from 'react-dom';
 import manifest from '../../public/manifest.json';
 import config from '../config';
 import { globalStyles } from '../theme';
-
-interface AppProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Component: NextComponentType<NextPageContext, any, {}>;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  pageProps?: any;
-}
 
 /* istanbul ignore next */
 if (
