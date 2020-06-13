@@ -32,9 +32,7 @@ jobs:
       - name: Export static version
         run: npm run export
       - name: Run unit tests and generate code coverage report
-        uses: stefanoeb/jest-action@1.0.2
-        with:
-          jestArgs: --config '__tests__/jest/jest.config.js' --coverage
+        run: npm run test:unit
       - name: Start server and run end-to-end tests
         env:
           CYPRESS_CI: true
