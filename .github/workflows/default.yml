@@ -32,7 +32,7 @@ jobs:
       - name: Export static version
         run: npm run export
       - name: Run unit tests and generate code coverage report
-        run: npm run test:unit
+        run: npm run test:coverage
       - name: Start server and run end-to-end tests
         env:
           CYPRESS_CI: true
